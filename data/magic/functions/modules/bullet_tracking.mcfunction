@@ -1,5 +1,5 @@
 #子弹追踪曲线修正模块
-#Usage: execute as @e[tag=bullet,...] at @s run function magic:bullet_tracking
+#Usage: execute as @e[tag=bullet,...] at @s run function magic:modules/bullet_tracking
 
 #Scoreboard
 scoreboard objectives add Bullet_RotX dummy
@@ -23,10 +23,22 @@ execute store result score @s ToTarget_RotY run data get entity @s Rotation[1] 1
 execute store result entity @s Rotation[0] float 0.000001 run scoreboard players get @s Bullet_RotX
 execute store result entity @s Rotation[1] float 0.000001 run scoreboard players get @s Bullet_RotY
 
+#-----水平偏移-----
 #Offset_Calculation
 scoreboard players operation @s Math = @s ToTarget_RotX
 scoreboard players operation @s Math -= @s Bullet_RotX
 
-#                                     偏移探测范围↓            偏移角度参数↓
-execute as @s at @s if score @s Math matches -50000000..0 run tp @s ~ ~ ~ ~-2 ~
-execute as @s at @s if score @s Math matches 0..50000000 run tp @s ~ ~ ~ ~2 ~
+#                                     偏移探测范围↓             偏移角度参数↓
+execute as @s at @s if score @s Math matches -90000000..0 run tp @s ~ ~ ~ ~-2 ~
+execute as @s at @s if score @s Math matches 0..90000000 run tp @s ~ ~ ~ ~2 ~
+
+
+#-----竖直偏移-----
+#Offset_Calculation
+scoreboard players operation @s Math = @s ToTarget_RotY
+scoreboard players operation @s Math -= @s Bullet_RotY
+
+#                                     偏移探测范围↓             偏移角度参数↓
+execute as @s at @s if score @s Math matches -90000000..0 run tp @s ~ ~ ~ ~ ~-2
+execute as @s at @s if score @s Math matches 0..90000000 run tp @s ~ ~ ~ ~ ~2
+

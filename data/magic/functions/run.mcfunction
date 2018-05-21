@@ -19,7 +19,7 @@ execute as @e[tag=bullet3,scores={timer=2..6}] at @s run tp @s ^0.4 ^ ^0.3 ~ ~
 execute as @e[tag=bullet4,scores={timer=2..6}] at @s run tp @s ^-0.4 ^ ^0.3 ~ ~
 
 #弹道修正
-execute as @e[tag=bullet,scores={timer=8..}] at @s run function magic:bullet_tracking
+execute as @e[tag=bullet,scores={timer=8..}] at @s run function magic:modules/bullet_tracking
 
 #移动
 execute as @e[tag=bullet,scores={timer=8..}] at @s run tp @s ^ ^ ^0.5
