@@ -1,9 +1,9 @@
 scoreboard players add @e[tag=bullet] timer 1
 kill @e[tag=bullet,scores={timer=100..}]
 
-execute as @a[scores={carrot_stick=1..}] run function pack:click
+execute as @a[scores={carrot_stick=1..}] run function pack:bullet/rail_bullet/click
 
-#现在是特效时间
+#特效时间
 execute as @e[tag=bullet] at @s run particle minecraft:flame ~ ~ ~ 0 0 0 0 1 normal @a
 
 #初始化弹道

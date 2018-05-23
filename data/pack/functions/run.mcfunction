@@ -1,1 +1,1 @@
-function pack:bullet/rail_bullet
+function pack:sword_move/sword_move
