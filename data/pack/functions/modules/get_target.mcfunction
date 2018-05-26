@@ -1,3 +1,4 @@
+#光标方向目标获取
 #Usage:execute as @e[...] at @s run function pack:(...)/get_target
 
 #execute if entity @s[distance=..x] ...
