@@ -5,6 +5,7 @@ execute as @a[scores={carrot_stick=1..}] run function pack:bullet/rail_bullet/cl
 
 #特效时间
 execute as @e[tag=bullet] at @s run particle minecraft:flame ~ ~ ~ 0 0 0 0 1 normal @a
+#execute as @e[tag=bullet] at @s run particle minecraft:sweep_attack ~ ~1 ~ 0 0 0 1 1 normal @a
 
 #初始化弹道
 execute as @e[tag=bullet1,scores={timer=1}] at @s run tp @s ~ ~ ~ ~4 ~2
@@ -18,7 +19,7 @@ execute as @e[tag=bullet3,scores={timer=2..6}] at @s run tp @s ^0.4 ^ ^0.35 ~ ~
 execute as @e[tag=bullet4,scores={timer=2..6}] at @s run tp @s ^-0.4 ^ ^0.35 ~ ~
 
 #弹道修正
-execute as @e[tag=bullet,scores={timer=8..}] at @s run function pack:modules/bullet_tracking
+execute as @e[tag=bullet,scores={timer=8..}] at @s run function pack:bullet/rail_bullet/bullet_tracking
 
 #移动
 execute as @e[tag=bullet,scores={timer=8..}] at @s run tp @s ^ ^ ^0.7
