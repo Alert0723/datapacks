@@ -1,1 +1,2 @@
-#function pack:shock_wave/shock_wave
+function pack:modules/sneak_keep
+function pack:druid/druid
