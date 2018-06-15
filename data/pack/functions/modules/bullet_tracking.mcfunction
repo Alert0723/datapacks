@@ -16,6 +16,7 @@ execute store result score @s Bullet_RotY run data get entity @s Rotation[1] 100
 
 #Get_ToTarget_Data
 tp @s ~ ~ ~ facing entity @e[type=!player,tag=!bullet,distance=..20,limit=1] feet
+#                                                                     瞄准位置↑(eyes/feet)
 
 execute store result score @s ToTarget_RotX run data get entity @s Rotation[0] 1000000
 execute store result score @s ToTarget_RotY run data get entity @s Rotation[1] 1000000
