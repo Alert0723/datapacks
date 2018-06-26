@@ -5,6 +5,4 @@ execute at @s rotated ~ 0 positioned ^ ^ ^0.8 run summon minecraft:area_effect_c
 
 execute as @s at @s rotated ~ 0 positioned ^ ^ ^1 run tp @e[tag=bullet,distance=..1,limit=4] ~ ~1 ~ ~ ~
 
-execute as @s at @s run function pack:module/get_target
-
 scoreboard players set @s carrot_stick 0
